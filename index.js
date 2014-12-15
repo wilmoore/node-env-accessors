@@ -11,6 +11,7 @@ var format = require('util').format;
  */
 
 exports.assert = required;
+exports.contains = has;
 exports.del = del;
 exports.get = get;
 exports.has = has;
@@ -79,6 +80,7 @@ function del(key) {
 
 /**
  * Whether `process.env` contains given key.
+ * aliases: contains
  *
  * @param {String} key
  * @return {Boolean}

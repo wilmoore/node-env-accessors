@@ -26,7 +26,7 @@ Get given key's value from `process.env`.
 
 ###### .has
 
-> aliases: -
+> aliases: contains
 
 Whether `process.env` contains given key.
 
