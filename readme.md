@@ -1,6 +1,6 @@
 # env-accessors
 
-[![Build Status](http://img.shields.io/travis/wilmoore/node-env-accessors.svg)](https://travis-ci.org/wilmoore/node-env-accessors) [![NPM version](http://img.shields.io/npm/v/env-accessors.svg)](https://www.npmjs.org/package/env-accessors) [![NPM downloads](http://img.shields.io/npm/dm/env-accessors.svg)](https://www.npmjs.org/package/env-accessors) [![LICENSE](http://img.shields.io/npm/l/env-accessors.svg)](license)
+[![Build Status](http://img.shields.io/travis/wilmoore/node-env-accessors.svg)](https://travis-ci.org/wilmoore/node-env-accessors) [![NPM version](http://img.shields.io/npm/v/env-accessors.svg)](https://www.npmjs.org/package/env-accessors) [![NPM downloads](http://img.shields.io/npm/dm/env-accessors.svg)](https://www.npmjs.org/package/env-accessors) [![LICENSE](http://img.shields.io/npm/l/env-accessors.svg)](license) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > process.env accessor functions.
 
