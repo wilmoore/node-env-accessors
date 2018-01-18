@@ -1,33 +1,33 @@
-'use strict';
+'use strict'
 
 /*!
  * imports.
  */
 
-var format = require('util').format;
+var format = require('util').format
 
 /*!
  * exports.
  */
 
-exports.assert = required;
-exports.contains = has;
-exports.del = del;
-exports.get = get;
-exports.has = has;
-exports.missing = missing;
-exports.put = set;
-exports.required = required;
-exports.set = set;
+exports.assert = required
+exports.contains = has
+exports.del = del
+exports.get = get
+exports.has = has
+exports.missing = missing
+exports.put = set
+exports.required = required
+exports.set = set
 
 /*!
  * init.
  */
 
-var requireError = 'Missing required environment variable "%s"';
+var REQUIRED_ERROR = 'Missing required environment variable "%s"'
 
 /**
- * Thows a `ReferenceError` if given key is missing from `process.env`.
+ * Throw a `ReferenceError` if given key is missing from `process.env` and return given key's value from `process.env` otherwise.
  * aliases: assert
  *
  * @param {String} key
@@ -36,8 +36,12 @@ var requireError = 'Missing required environment variable "%s"';
  * @throws {ReferenceError}
  */
 
-function required(key) {
-  if (missing(key)) throw new ReferenceError(format(requireError, key));
+function required (key) {
+  if (missing(key)) {
+    throw new ReferenceError(format(REQUIRED_ERROR, key))
+  } else {
+    return get(key)
+  }
 }
 
 /**
@@ -48,8 +52,8 @@ function required(key) {
  * @api public
  */
 
-function get(key) {
-  return process.env[key];
+function get (key) {
+  return process.env[key]
 }
 
 /**
@@ -61,9 +65,9 @@ function get(key) {
  * @api public
  */
 
-function set(dictionary) {
+function set (dictionary) {
   for (var key in dictionary) {
-    if (missing(key)) process.env[key] = dictionary[key];
+    if (missing(key)) process.env[key] = dictionary[key]
   }
 }
 
@@ -74,8 +78,8 @@ function set(dictionary) {
  * @api public
  */
 
-function del(key) {
-  delete process.env[key];
+function del (key) {
+  delete process.env[key]
 }
 
 /**
@@ -87,8 +91,8 @@ function del(key) {
  * @api public
  */
 
-function has(key) {
-  return process.env.hasOwnProperty(key);
+function has (key) {
+  return process.env.hasOwnProperty(key)
 }
 
 /**
@@ -99,6 +103,6 @@ function has(key) {
  * @api public
  */
 
-function missing(key) {
-  return !has(key);
+function missing (key) {
+  return !has(key)
 }
