@@ -44,7 +44,7 @@ Whether given key is missing from `process.env`.
 
 > aliases: assert
 
-Thows a `ReferenceError` if given key is missing from `process.env`.
+Throw a `ReferenceError` if given key is missing from `process.env` and return given key's value from `process.env` otherwise.
 
     required('NEW_RELIC_LICENSE_KEY');
 
